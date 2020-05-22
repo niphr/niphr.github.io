@@ -23,3 +23,21 @@ date: 2020-05-04
   * can only be used for types with one type constructor and one type
   * e.g. `newtype Name = Name (String, String) deriving (Show)`
 
+## Lesson 17 - Design by composition - semigroups and monoids
+* Semigroup typeclass - needs to implement `<>` operator - combination of any two instances of the typeclass into one
+  * `<>` implementation must be associative, but Haskell compiler does NOT enforce it
+* Monoid typeclass - derived from Semigroup, but it also needs an identity element (`x <> id = x`, e.g. for addition it would be 0, for multiplication 1)
+  * Lists are the most common Monoids (empty list `[]` is the identity element)
+  * Monoid is not actually derived from Semigroup, because it came first, historically
+  * mappend is the same as `<>` (or `++` for lists)
+  * "m" in mappend, mempty, mconcat stands for Monoid
+* typeclass laws - not enforced by compiler, but consumers rely on them, must be ensured
+  * Semigroup
+    * `<>` must be associative
+  * Monoid
+    * `mappend mempty x == x`
+    * `mappend x mempty == x`
+    * mappend must be associative
+    * `mconcat = foldr mappend mempty`
+
+## Lesson 18 - Parameterized types
