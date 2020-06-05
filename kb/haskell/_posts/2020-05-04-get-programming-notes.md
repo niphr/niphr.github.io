@@ -66,7 +66,7 @@ date: 2020-05-04
 
 ## Lesson 23 - Working with text and Unicode
 * `Data.Text` is preferable to `String` (for almost any practical application, althought `String` is instructional in the learning phase)
-  * differences: array vs. linked list, better efficiency, strict vs. lazy evaluation, good Unicode suppoer
+  * differences: array vs. linked list, better efficiency, strict vs. lazy evaluation, good Unicode support
 * language extensions, e.g. OverloadedStrings
 * `Data.Text.IO` for working with `IO Text` - no need to convert between `String` and `Text`
 
