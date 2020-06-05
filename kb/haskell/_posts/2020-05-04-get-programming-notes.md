@@ -41,3 +41,37 @@ date: 2020-05-04
     * `mconcat = foldr mappend mempty`
 
 ## Lesson 18 - Parameterized types
+* kinds - types of types (`:kind (,,)` to find out kind of triple)
+* qualified imports `import qualified Data.Map as Map`
+* `Data.Map`
+  * `fromList` to build maps
+  * `lookup` to get value
+
+## Lesson 21 - Hello world! - Introducing IO types
+* `IO` - parameterized type providing context (this code is impure, may change state)
+  * `IO` actions are not functions
+* values must stay in the context of `IO` - unlike e.g. `Maybe a`, you can´t transform `IO a` to `a`
+* `do` notation - different assignment options:
+  * `let x = y` - `y` must not be of `IO`-type
+  * `x <- getLine` - getLine is `IO` action, but `x` can be later treated as `a`, not `IO a`
+
+## Lesson 22 - Interacting with the command-line and lazy IO
+* `getArgs :: IO [String]` to read command-line arguments
+* `mapM` - map in the context of a `Monad` (can´t use regular `map`)
+* `mapM_` - same as above, but returns no value
+* `print` - same as `(putStrLn . show)`
+* `replicateM n ioAction` - repeats `ioAction` `n` times
+* `getContents` - reads stdin, treating is as a lazy list of characters
+* `lines`, `splitOn`
+
+## Lesson 23 - Working with text and Unicode
+* `Data.Text` is preferable to `String` (for almost any practical application, althought `String` is instructional in the learning phase)
+  * differences: array vs. linked list, better efficiency, strict vs. lazy evaluation, good Unicode suppoer
+* language extensions, e.g. OverloadedStrings
+* `Data.Text.IO` for working with `IO Text` - no need to convert between `String` and `Text`
+
+## Lesson 24 - Working with files
+* functions that work with handles (`hGetContents`, `hGetLine`) vs. files (`readFile`, `appendFile`) - the latter are generally more abstract and easier to use
+* lazy evaluation can lead to tricky bugs (closing the handle before the file contents have been evaluated) -> in more complex programs, strict evaluation of file IO is preferred
+
+## Lesson 25 - Working with binary data
