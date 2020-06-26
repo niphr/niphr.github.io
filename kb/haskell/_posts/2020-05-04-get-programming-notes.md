@@ -75,3 +75,4 @@ date: 2020-05-04
 * lazy evaluation can lead to tricky bugs (closing the handle before the file contents have been evaluated) -> in more complex programs, strict evaluation of file IO is preferred
 
 ## Lesson 25 - Working with binary data
+* `ByteString`
