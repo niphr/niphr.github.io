@@ -27,4 +27,22 @@ date: 2020-06-19
   * `1 :: x == x.::(1)`
 * empty List = `Nil` or `List()`
 * useful List methods: `drop, dropRight, count, exists, filter, forAll, length, isEmpty, mkString, reverse, sort`
+* tuples 
+  * accessing elements through `._1, ._2,...`
+* sets
+  * there are both mutable and immutable (default) variants
+* maps
+  * mutable and immutable variants as well
 
+## Classes and Objects
+* class members (fields and methods) are public by default
+* `procedure` = method called only for it´s side-effect
+* classes can´t have static members - Scala has singleton objects instead
+  * keyword `object`
+  * if `class` and `object` have the same name, the object is called the `companion object`
+    * companion class and object have to be defined in the same file
+  * singleton objects can´t be parameterized, unlike classes (s. objects can´t be instantiated with a `new` keyword)
+* `standalone object` - when the object´s name does not match a class name (useful for e.g. encapsulating related methods)
+* application entry point
+  * any standalone singleton object with a proper signature (type Unit, args parameter)
+* App trait - eliminates need to define main method, automatically exposes args
