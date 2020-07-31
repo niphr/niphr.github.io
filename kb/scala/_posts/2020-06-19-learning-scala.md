@@ -46,3 +46,13 @@ date: 2020-06-19
 * application entry point
   * any standalone singleton object with a proper signature (type Unit, args parameter)
 * App trait - eliminates need to define main method, automatically exposes args
+
+## Basic Types and Operations
+* string interpolators: `s`, `raw`, `f`
+* all methods can be used in operator notation (e.g. `"hello" contains "o"` or `7 toLong`)
+* only `+, -, !, ~` can be used as prefix operators
+* convention on using parentheses when invoking methods: if method has side effects, include them (`println()`), otherwise they are not needed (`"Hello".toLowerCase`)
+* logical operators: `||, &&` - short-circuit (from left; right side may not be evaluated)
+  * non-short-circuiting variants: `|, &`
+* bitwise operations: or `|`, and `&`, xor `^`, complement `~`
+  * shift left `<<`, shift right `>>`, unsigned shift right `>>>`
