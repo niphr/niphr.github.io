@@ -48,7 +48,7 @@ date: 2020-06-19
 * App trait - eliminates need to define main method, automatically exposes args
 
 ## Basic Types and Operations
-* string interpolators: `s`, `raw`, `f`
+* *string interpolators*: `s`, `raw`, `f`
 * all methods can be used in operator notation (e.g. `"hello" contains "o"` or `7 toLong`)
 * only `+, -, !, ~` can be used as prefix operators
 * convention on using parentheses when invoking methods: if method has side effects, include them (`println()`), otherwise they are not needed (`"Hello".toLowerCase`)
@@ -56,3 +56,43 @@ date: 2020-06-19
   * non-short-circuiting variants: `|, &`
 * bitwise operations: or `|`, and `&`, xor `^`, complement `~`
   * shift left `<<`, shift right `>>`, unsigned shift right `>>>`
+* `==`, `!=` - *value equality* (on objects, unlike Java´s *reference equality*)
+* operator precedence - based on the first character (e.g. `* /` has higher precedence than `+ -` and therefore `***` > `+++`)
+  * *assignment operators* (end with `=` symbol) - lowest precedence
+  * operands are always evaluated from the left (no matter the operator associativity)
+    * in `a ::: b`, `a` is evaluated first, even though `:::` method is invoked on `b` with `a` as an argument
+
+## Functional Objects
+* class parameters are only accessible from the current object
+  * define fields, if you need to access the other objects parameters (e.g. adding Rational numbers)
+* self-reference - `this` keyword
+* *auxiliary constructors* - other than the primary constructor (`def this...`)
+  * must call other class constructor (auxiliary or primary)
+  * ultimately, each constructor will call the primary class constructor (even if transitively)
+* operators can be used in method names
+* *identifiers*
+  * *operator identifiers* - e.g. `+, ++, :->`
+  * alphanumeric (camel case, avoid `_, $`)
+    * constants in camel case as well, not upper case as in Java
+  * *mixed identifiers* - of form `<alphanumeric>_<operator>`, e.g. `unary_+`
+  * *literal identifier* - arbitrary string in backticks ``(`yield`)``
+
+## Built-in Control Structures
+* `if, while, try, match, for` and function calls
+* `while` and `do-while` - try to avoid, as their return type is Unit; they likely modify vars or perform IO
+* *for-expressions* - iterating through collections
+  * works with ranges `for (i <- 1 to 4)`
+  * nested iteration - multiple `x <- ...` expressions
+  * mid-stream assignment (with `=` sign, creates a val)
+  * producing a new collection - `for clauses yield body`
+* try-catch-finally (finally should be used mainly for side-effects, e.g. cleanup, closing the file; should not return a value)
+* match-case pattern matching
+* possible to shadow variable name in an inner scope (although it may be confusing to readers)
+* case class can be instantiated without using `new`
+
+## Functions and Closures
+
+## Intro (FPiS)
+* Scala REPL - `:paste` to insert multiline block
+* `@annotation.tailrec` to have the compiler check that all recursive function calls are tail-recursive (and do not use up unnecessary stack frames, leading to potential stack overflow)
+* `compose, andThen` - part of Scala library
