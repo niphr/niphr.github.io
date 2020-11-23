@@ -91,8 +91,44 @@ date: 2020-06-19
 * case class can be instantiated without using `new`
 
 ## Functions and Closures
+* helper functions - make them private or nest inside functions (usually not necessary to be called by function clients)
+* underscore as parameter placeholder `someNumbers.filter(_ > 0)`
+  * equivalent to `someNumbers.filter(x => x > 0)` (as long as each parameter figures only once)
+  * when using multiple undescores, the first one stands for the first parameter, second for second etc. `_ + _`
+* partially applied functions
+* closures
+* special function call forms
+  * repeated parameters (asterisk): `def echo(args: String*)`
+  * named parameters - they need to come *after* positional parameters
+  * default parameter values
+* tail recursion optimization
+  * only for self-referencing function (no optimization possible if the recursion is indirect)
+  * tail recursive function are essentially compiled to while loops, having no performance penalty
 
 ## Intro (FPiS)
 * Scala REPL - `:paste` to insert multiline block
 * `@annotation.tailrec` to have the compiler check that all recursive function calls are tail-recursive (and do not use up unnecessary stack frames, leading to potential stack overflow)
 * `compose, andThen` - part of Scala library
+
+## Control Abstraction
+* *loan pattern* - some resource (e.g. file) is loaned to a client, which does not need to worry about correctly closing it/clean up
+* if a function takes a single argument, curly braces can be used instead of parentheses
+  * useful in conjuction with currying `withFile(file: File, op: PrintWriter => Unit)` can be rewritten as `withFile(file: File)(op: PrintWriter => Unit)` and used as `withFile(file) {writer => ...}`
+* *by-name parameters* - not sure about where to use them
+
+## Composition and Inheritance
+* *combinators* - composing operators
+* method with no implementation - *abstract class member* (opposite of *concrete*)
+  * class with abstract members must itself be declared abstract
+  * abstract class can not be instantiated
+* *parameterless* vs. *empty-paren* methods
+  * Scala is liberal, more of a convention - parameterless methods should be used when there are no side-effects
+* member of the subclass *overrides* (or *implements* in case of abstract superclass)  member of the superclass with the same name
+* *subtyping* - value of the subclass can be used where a value of the superclass is required
+* Scala has only 2 namespaces (for values and types)
+  * method/field can override field/method with the same name
+  * class can not contain field and method with the same name - they share the value namespace
+* *parametric field* - defines parameter and the field of the same name (reduces duplication)
+* *final* modifier
+  * on class member -> can not be overriden
+  * on class -> can not be subclassed
