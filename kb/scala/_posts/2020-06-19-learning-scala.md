@@ -132,3 +132,40 @@ date: 2020-06-19
 * *final* modifier
   * on class member -> can not be overriden
   * on class -> can not be subclassed
+* *factory* - have a unified way how clients can create objects, regardless of implementation details (e.g. by having multiple overloaded constructors)
+* *private classes* - to hide implementation details
+
+## Scala´s Hierarchy
+* *Any* - common superclass (every class inherits from it), *Nothing* - common subclass (subclass of every other class)
+* subclasses of *Any*: *AnyVal* (value classes, e.g. Int, Char), *AnyRef* (reference classes, equivalent to Java Object, e.g. List, Iterable,...)
+* *eq* checks reference equality (`==` and `equals` check value equality - more consistent than Java)
+
+## Traits
+* *mix in* with `extends` or `with` keywords
+* multiple traits can be mixed in `with Trait1 with Trait2`
+* differences from classes:
+  * can not take parameters (`trait T(x: Int)` is invalid)
+  * `super` calls are dynamically bound
+* *Ordered* trait
+* possible use: stackable modifications
+* order of traits is important - in general, the ones on the right take effect first (*linearization*)
+
+## Packages and Imports
+* intention: minimize coupling, increase modularity
+* *_root_* package at the top of hierarchy
+* imports can be renamed `import pkg.{Sql => S}`
+* specific package members can be hidden `import pkg.{Hidden => _, _}` (imports everything except Hidden)
+* *implicit imports*
+  * packages imported to every source file: java.lang.\_, scala.\_, Predef.\_
+* *access modifiers*: `private, protected`
+  * can be enhanced with modifiers `private[X]`, meaning *private up to X* (X being some enclosing, higher-level package)
+  * *object-private* access: `private[this]` -> visibility limited to the same instance (other objects of the same class can not access it)
+* *package object* - visible everywhere in package
+
+## Assertions and Tests
+* `assert`, `ensuring`
+* asserts are enabled with JVM parameter `-ea`
+* ScalaTest, ScalaCheck
+
+## Case Classes and Pattern Matching
+
