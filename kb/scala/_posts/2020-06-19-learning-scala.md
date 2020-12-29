@@ -168,4 +168,33 @@ date: 2020-06-19
 * ScalaTest, ScalaCheck
 
 ## Case Classes and Pattern Matching
+* pattern types: *constant*, *constructor*, *variable*, *sequence* (for e.g. List), *tuple*, *typed*
+* *type erasure* - no information about type arguments is maintained at runtime? (with the exception of Array)
+* *variable binding* `case p @ List(1, _) => p`
+* *pattern guards*
+* *sealed* classes / traits - contained in one file -> safer for pattern matching
+* `@unchecked` annotation - warning that pattern match is not exhaustive will be suppressed
+* *Option* type
+* patterns can be used in variable definitions (ex. of multiple assignment: `val (x, y) = (5, 6)`)
 
+## Working with Lists
+* concatenation `:::` (`++` works with all collections)
+* `???` method - placeholder, throws `NotImplemented` exceptions
+* `length` method - time proportional to number of elements => for checking emptiness, use `list.isEmpty` instead of `list.length == 0`
+* other useful first-order methods: `drop`, `take`, `splitAt`, `reverse`, `indices`, `flatten`, `toString`, `mkString`
+* `zip`, `unzip`, `zipWithIndex`
+* higher-order methods: `map`, `flatMap`, `forEach`, `filter`, `partition`, `find`, `takeWhile`, `dropWhile`, `span`, `forAll`, `exists`, `foldLeft` (`/:`), `foldRight` (`:\`), `sortWith`
+* methods of the List (companion) object: `List.range`, `List.fill`, `List.tabulate`, `List.concat`
+* when designing a polymorphic method that takes a function and non-function arguments, place the function argument last in a curried parameter list of its own
+  * better for type inference - Scala will infer the type from the first argument; if the function went first, its type could not be automatically inferred and would need to be explicitly specified
+
+## Working With Other Collections
+* `Sequence` - ordered collections
+  * `List`, `Array`
+  * `ListBuffer` - constant time append and prepend
+  * `ArrayBuffer`, `StringOps` (implicit conversion from `String`)
+* sets, maps
+  * immutable versions take up less space
+  * sorted variants: trait `SortedSet`, `SortedMap`
+  
+## Mutable Objects
