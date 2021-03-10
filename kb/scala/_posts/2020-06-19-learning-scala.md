@@ -198,3 +198,59 @@ date: 2020-06-19
   * sorted variants: trait `SortedSet`, `SortedMap`
   
 ## Mutable Objects
+
+## Type Parameterization
+* generic types have by default *nonvariant* (rigid) subtyping
+  * i.e. `Queue[String]` is not usable in place where `Queue[AnyRef]` is required
+  * *variance annotations* (`+`, `-`)
+  * *covariant* (flexible) subtyping can be specified by plus sign: `trait Queue[+T] {...}`, *contravariant* by minus
+* type can be required to be a supertype of another, e.g. `def enqueue[U >: T](x: U)...` - U is required to be a supertype of T
+
+## Abstract Members
+* *abstract* = not having full definition in class
+* can apply to *vals*, *vars*, *methods* and *types*
+* abstract vals differ from method parameters in evaluation order - parameters are evaluated *before* being passed to class constructor, implementations of abstract vals *after*
+  * *pre-initialized fields*: use braces `new { val numerArg = 1 * x } with RationalTrait`
+  * `lazy val` - evaluated exactly once, on first usage; suitable for functional style without side effects, where execution order does not matter much
+* *abstract types* - can be specialized in subclasses `type SuitableFood <: Food`
+* *nominal* (standard) vs. *structural* subtyping (via *refinement types*)
+* *enumerations* `object Color extends Enumeration { val Red, Blue, Green = Value }`
+
+## Implicit Conversions and Parameters
+* rules:
+  * only declarations prefixed with `implicit` are taken into account
+  * declaration must be in scope as a single identifier (i.e. `convert`, not `package.convert`) or be declared in a companion object
+  * only one implicit is inserted (no chaining)
+  * implicits are not tried if the code type checks
+* types:
+  * conversion to another type (`val x: Double = 3` -> implicit conversion from Int to Double is in Predef)
+  * receiver conversion (`obj.method`, when object `obj` does not have `method` -> try to convert `obj`)
+  * implicit parameters - prefer specific or custom types to minimize unwanted implicits (e.g. use `Email` instead of `String`)
+* `implicitly`
+* context bounds `method[T : Ordering]`
+* when multiple implicit conversions could apply, the most specific is chosen (in older Scala versions, none would be)
+
+## Implementing Lists
+* two efficient ways to build a `List`:
+  * prepending to `List` with `::`
+  * using `ListBuffer` (implementation uses mutable state; adding to the end is also efficient) and calling `toList` at the end
+
+## For Expressions Revisited
+* all `for` expressions with `yield` are transformed by compiler into a combination of `map`, `flatMap`, `withFilter`
+* all `for` expressions without `yield` compile into `withFilter` and `foreach`
+* general form: `for ( seq ) yield expr`, where *seq* can contain *generators, definitions and filters*
+
+## Collections in Depth
+* trait *Traversable* - top of hierarchy, has abstract method `foreach`
+* trait *Iterable* - abstract method `iterator`
+  * `grouped` - iterator returns next *n* elements instead of just 1
+  ```
+  > val xs = List(1, 2, 3, 4, 5)
+  > val git = xs grouped 3
+  > git.next()
+  List(1, 2, 3)
+  > git.next()
+  List(4, 5)
+  ```
+  * `sliding` - returns sliding window (List(1, 2, 3), List(2, 3, 4),...)
+* `Seq, Set, Map`
