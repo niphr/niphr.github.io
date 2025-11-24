@@ -12,9 +12,9 @@ R packages at NIPH are organized into two levels:
 
 ## Package Registry
 
-| Package | Level | Maintainer | Status | Documentation |
-|---------|-------|-----------|--------|---|
-| csdata | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) | [Link](https://www.csids.no/csdata/) |
+| Package | Level | Maintainer | Status |
+|---------|-------|-----------|--------|
+| [csdata](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) |
 
 ## Requirements by Level
 
