@@ -43,7 +43,7 @@ R packages at NIPH are organized into two levels:
 
 ### Core Team
 
-FHI maintains a core team (4-5 people) responsible for:
+NIPH maintains a core team (4-5 people) responsible for:
 
 - Developing and maintaining standardized coding practices and documentation guidelines
 - Establishing and updating quality standards for R packages
