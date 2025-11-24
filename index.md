@@ -14,7 +14,14 @@ R packages at NIPH are organized into two levels:
 
 | Package | Level | Maintainer | Status |
 |---------|-------|-----------|--------|
+| [cs9](https://www.csids.no/cs9/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cs9)](https://cran.r-project.org/package=cs9) |
+| [csalert](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csalert)](https://cran.r-project.org/package=csalert) |
 | [csdata](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) |
+| [csdb](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) |
+| [csmaps](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) |
+| [csstyle](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csstyle)](https://cran.r-project.org/package=csstyle) |
+| [cstidy](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) |
+| [csutil](https://www.csids.no/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
 
 ## Requirements by Level
 
