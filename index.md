@@ -14,23 +14,23 @@ R packages at NIPH are organized into two levels:
 
 | Package | Level | Maintainer | Last Updated | Status | Documentation |
 |---------|-------|-----------|--------------|--------|---|
-| Example package | Area | Name | YYYY-MM-DD | Active | [Link](#) |
+| csdata | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) | CRAN | [Link](https://www.csids.no/csdata/) |
 
 ## Requirements by Level
 
 ### Project-level Packages
 
-- [ ] GitHub repository in the `niphr` organization
-- [ ] README with basic usage examples
-- [ ] Automated checks via GitHub Actions (basic)
+- GitHub repository in the `niphr` organization
+- README with basic usage examples
+- Automated checks via GitHub Actions (basic)
 
 ### Area-level Packages
 
-- [ ] All project-level requirements
-- [ ] Full documentation via pkgdown (auto-generated on GitHub Pages)
-- [ ] Comprehensive GitHub Actions CI/CD (unit tests, R CMD check, code coverage)
-- [ ] Management sign-off confirming succession plan: at least one additional person trained on the package, or critical functions documented with worked examples
-- [ ] Version policy documented (breaking changes, deprecation path)
+- All project-level requirements
+- Full documentation via pkgdown (auto-generated on GitHub Pages)
+- Comprehensive GitHub Actions CI/CD (unit tests, R CMD check, code coverage)
+- Management sign-off confirming succession plan: at least one additional person trained on the package, or critical functions documented with worked examples
+- Version policy documented (breaking changes, deprecation path)
 
 ## Governance
 
