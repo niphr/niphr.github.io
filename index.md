@@ -105,10 +105,9 @@ Everything above becomes mandatory, plus:
 **Dependencies**: Keep dependencies on other custom packages to a minimum. Flag any such dependencies during review so we can think through maintenance implications.
 
 **Maintenance**:
-- Annual review: core team checks if packages are still in use
-- Packages not updated in 12+ months get marked "maintenance mode"
-- Unmaintained packages stay available but won't receive updates
-- If a maintainer leaves: identify a successor within 1 month, or the package moves to maintenance mode
+- Annual review: core team checks that the maintainer is still at NIPH and still wants to maintain the package
+- If the maintainer has left or no longer wants to maintain it: find a successor within 1 month, or the package moves to maintenance mode
+- Maintenance mode means the package stays available but won't receive updates
 
 ## Getting started
 
