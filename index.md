@@ -10,7 +10,7 @@ We organize packages into two levels:
 
 **Area-level packages**: Shared infrastructure used across multiple teams. These need full documentation, automated testing, and a succession plan.
 
-## Package Registry
+## Package registry
 
 | Package | Level | Maintainer | Status |
 |---------|-------|-----------|--------|
@@ -132,7 +132,7 @@ Your package needs to meet all area-level requirements. Submit a brief form to t
 - Link to documentation and test coverage
 - Expected user base
 
-The core team reviews and makes a recommendation. Final approval comes from the steering group, which includes a commitment to resource the succession plan.
+The core team reviews and makes a recommendation. Final approval comes from the steering group, meaning they also commit to funding the succession plan.
 
 ## Resources
 
