@@ -1,7 +1,3 @@
-# NIPH/FHI R Packages
-
-R packages developed at the Norwegian Institute of Public Health (NIPH/FHI), mostly for infectious disease surveillance and analysis.
-
 ## Overview
 
 We organize packages into two levels:
