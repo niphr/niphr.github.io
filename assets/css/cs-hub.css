@@ -1,0 +1,113 @@
+/* ==========================================================================
+   cs-hub.css — NIPH R Packages registry (niphr.github.io)
+   Same palette + fonts as the cstemplate pkgdown theme, so the hub and the
+   package sites read as one system.
+   ========================================================================== */
+
+:root{
+  --navy:#1e2c3a; --coral:#e0533c; --bg:#fbfaf7; --border:#ece8e1;
+  --muted:#6a7682; --faint:#9a958c; --tint:#f6e3d9; --tint-fg:#90573f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--navy);
+  font-family:"Source Sans 3",system-ui,sans-serif; font-size:16px; line-height:1.6;
+}
+a{color:var(--navy)}
+a:hover{color:var(--coral)}
+
+/* ── nav ─────────────────────────────────────────────────────────────────── */
+.site-nav{
+  display:flex; align-items:center; gap:26px; flex-wrap:wrap;
+  padding:18px 40px; border-bottom:1px solid var(--border); background:var(--bg);
+  position:sticky; top:0; z-index:10;
+}
+.site-nav .brand{
+  font-family:"Spectral",Georgia,serif; font-weight:600; font-size:21px;
+  text-decoration:none; letter-spacing:-.01em;
+}
+.site-nav .nav-links{display:flex; gap:22px; margin-left:auto; flex-wrap:wrap}
+.site-nav .nav-links a{
+  font-weight:600; font-size:14px; color:var(--muted); text-decoration:none;
+}
+.site-nav .nav-links a:hover{color:var(--coral)}
+
+/* ── hero ────────────────────────────────────────────────────────────────── */
+.hero{padding:54px 40px 30px; max-width:1180px; margin:0 auto}
+.overline{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--coral);
+  margin-bottom:16px;
+}
+.hero h1{
+  font-family:"Spectral",Georgia,serif; font-weight:600; font-size:52px;
+  letter-spacing:-.02em; line-height:1.04; margin:0;
+}
+.hero .rule{width:64px; height:3px; background:var(--coral); margin:24px 0 22px}
+.hero .lede{
+  font-family:"Spectral",Georgia,serif; font-size:21px; line-height:1.5;
+  color:#42535f; max-width:46em; margin:0;
+}
+.hero .lede em{color:var(--navy); font-style:italic}
+
+/* ── content ─────────────────────────────────────────────────────────────── */
+.content{max-width:1180px; margin:0 auto; padding:14px 40px 60px}
+.content h2{
+  font-family:"Spectral",Georgia,serif; font-weight:600; font-size:15px;
+  letter-spacing:.1em; text-transform:uppercase; margin:46px 0 18px;
+  display:flex; align-items:center; gap:12px;
+}
+.content h2::after{content:""; flex:1; height:1px; background:var(--border)}
+.content h3{font-family:"Spectral",Georgia,serif; font-weight:600; font-size:20px; margin:30px 0 10px}
+.content p{max-width:70ch; color:#3a4853}
+.content a{font-weight:500}
+.content ul{max-width:70ch; color:#3a4853}
+
+/* ── registry table ──────────────────────────────────────────────────────── */
+.content table{width:100%; border-collapse:collapse; margin:6px 0 20px}
+.content thead th{
+  text-align:left; font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#bfb6a8;
+  padding:0 18px 12px 0; border-bottom:1px solid var(--border); font-weight:600;
+}
+.content tbody td{
+  padding:16px 18px 16px 0; border-bottom:1px solid var(--border);
+  vertical-align:middle;
+}
+/* package name (first column) reads as a serif link */
+.content tbody td:first-child a{
+  font-family:"Spectral",Georgia,serif; font-weight:600; font-size:20px;
+  text-decoration:none;
+}
+.content tbody td:first-child a:hover{color:var(--coral)}
+/* level cell → pill (works on the plain "Project"/"Area" text) */
+.content tbody td:nth-child(2){
+  font-family:"JetBrains Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.03em; color:var(--tint-fg);
+}
+.content tbody td:nth-child(2)::before{
+  content:""; /* keep text; styled as pill below via span if desired */
+}
+.content tbody td img{vertical-align:middle}
+
+/* level explainer cards (optional: wrap the two level sections in .levels) */
+.levels{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:6px 0 10px}
+.levels .card{border:1px solid var(--border); border-radius:11px; padding:22px; background:#fff}
+
+/* ── footer ──────────────────────────────────────────────────────────────── */
+.site-footer{border-top:1px solid var(--border); margin-top:30px}
+.site-footer .row{
+  max-width:1180px; margin:0 auto; padding:26px 40px;
+  display:flex; gap:16px; flex-wrap:wrap; align-items:center;
+  font-size:13.5px; color:var(--muted);
+}
+.site-footer .mark{
+  margin-left:auto; font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:12px; color:#b3a999;
+}
+
+@media (max-width:680px){
+  .hero h1{font-size:38px}
+  .levels{grid-template-columns:1fr}
+}

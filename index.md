@@ -1,3 +1,11 @@
+---
+layout: default
+title: NIPH R Packages
+---
+
+<!-- The hero (title + lede) is rendered by _layouts/default.html.
+     Start the page content at the Overview so it isn't duplicated. -->
+
 ## Overview
 
 We organize packages into two levels:
@@ -16,8 +24,9 @@ We organize packages into two levels:
 | [csdb](https://niphr.github.io/csdb/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) |
 | [csmaps](https://niphr.github.io/csmaps/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) |
 | [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csstyle)](https://cran.r-project.org/package=csstyle) |
-| [cstidy](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) |
-| [csutil](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
+| [cstidy](https://niphr.github.io/cstidy/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) |
+| [cstime](https://niphr.github.io/cstime/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstime)](https://cran.r-project.org/package=cstime) |
+| [csutil](https://niphr.github.io/csutil/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
 
 ## Requirements by level
 
@@ -137,5 +146,5 @@ The core team reviews and makes a recommendation. Final approval comes from the 
 
 ---
 
-*Last updated: 2026-01-28*
+*Last updated: 2026-06-29*
 *Questions? Contact RichardAubrey.White@fhi.no*
