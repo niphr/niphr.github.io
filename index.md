@@ -18,12 +18,12 @@ We organize packages into two levels:
 
 | Package | Level | Maintainer | Status |
 |---------|-------|-----------|--------|
-| [cs9](https://niphr.github.io/cs9/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cs9)](https://cran.r-project.org/package=cs9) |
+| [cs9](https://niphr.github.io/cs9/) | Project | Richard Aubrey White | [![R-CMD-check](https://github.com/niphr/cs9/actions/workflows/check-and-pkgdown.yml/badge.svg)](https://github.com/niphr/cs9/actions/workflows/check-and-pkgdown.yml) |
 | [csalert](https://niphr.github.io/csalert/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csalert)](https://cran.r-project.org/package=csalert) |
 | [csdata](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) |
 | [csdb](https://niphr.github.io/csdb/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) |
 | [csmaps](https://niphr.github.io/csmaps/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) |
-| [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csstyle)](https://cran.r-project.org/package=csstyle) |
+| [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![R-CMD-check](https://github.com/niphr/csstyle/actions/workflows/check-and-pkgdown.yml/badge.svg)](https://github.com/niphr/csstyle/actions/workflows/check-and-pkgdown.yml) |
 | [cstidy](https://niphr.github.io/cstidy/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) |
 | [cstime](https://niphr.github.io/cstime/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstime)](https://cran.r-project.org/package=cstime) |
 | [csutil](https://niphr.github.io/csutil/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
