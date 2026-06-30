@@ -5,7 +5,7 @@
    ========================================================================== */
 
 :root{
-  --navy:#1e2c3a; --coral:#e0533c; --bg:#fbfaf7; --border:#ece8e1;
+  --navy:#1e2c3a; --coral:#e0533c; --bg:#ffffff; --border:#ece8e1;
   --muted:#6a7682; --faint:#9a958c; --tint:#f6e3d9; --tint-fg:#90573f;
 }
 *{box-sizing:border-box}
@@ -13,6 +13,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0; background:var(--bg); color:var(--navy);
   font-family:"Source Sans 3",system-ui,sans-serif; font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 a{color:var(--navy)}
 a:hover{color:var(--coral)}
