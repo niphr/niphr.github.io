@@ -39,7 +39,7 @@ install.packages(
 )
 ```
 
-Swap `cs9` for any package in the registry above. Packages that are also on CRAN can still be installed the usual way with `install.packages("csmaps")`; the R-universe build just tracks the newest development version. Browse every package, version, and build log at [niphr.r-universe.dev](https://niphr.r-universe.dev).
+Swap `cs9` for any package in the registry above. Packages that are also on CRAN can still be installed the usual way with `install.packages("csmaps")`; the R-universe build just tracks the newest development version. Browse every package and version at [niphr.r-universe.dev](https://niphr.r-universe.dev), or check the [build dashboard](https://niphr.r-universe.dev/builds) for build status across R versions and platforms.
 
 ## Requirements by level
 
