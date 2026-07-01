@@ -30,7 +30,7 @@ We organize packages into two levels:
 
 ## Installing packages
 
-All cs* packages are built continuously on the [niphr R-universe](https://niphr.r-universe.dev), which always carries the latest development version. This is also the easiest way to install **cs9** and **csstyle**, which are not on CRAN.
+All niphr packages are built continuously on the [niphr R-universe](https://niphr.r-universe.dev), which always carries the latest development version. It's also the easiest way to install packages that aren't on CRAN, such as **cs9** and **csstyle**.
 
 ```r
 install.packages(
