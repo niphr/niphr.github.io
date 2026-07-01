@@ -28,6 +28,19 @@ We organize packages into two levels:
 | [cstime](https://niphr.github.io/cstime/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstime)](https://cran.r-project.org/package=cstime) |
 | [csutil](https://niphr.github.io/csutil/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
 
+## Installing packages
+
+All cs* packages are built continuously on the [niphr R-universe](https://niphr.r-universe.dev), which always carries the latest development version. This is also the easiest way to install **cs9** and **csstyle**, which are not on CRAN.
+
+```r
+install.packages(
+  "cs9",
+  repos = c("https://niphr.r-universe.dev", "https://cloud.r-project.org")
+)
+```
+
+Swap `cs9` for any package in the registry above. Packages that are also on CRAN can still be installed the usual way with `install.packages("csmaps")`; the R-universe build just tracks the newest development version. Browse every package, version, and build log at [niphr.r-universe.dev](https://niphr.r-universe.dev).
+
 ## Requirements by level
 
 ### Project-level packages
