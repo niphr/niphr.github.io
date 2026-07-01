@@ -18,15 +18,15 @@ We organize packages into two levels:
 
 | Package | Level | Maintainer | Status |
 |---------|-------|-----------|--------|
-| [cs9](https://niphr.github.io/cs9/) | Project | Richard Aubrey White | [![R-CMD-check](https://github.com/niphr/cs9/actions/workflows/check-and-pkgdown.yml/badge.svg)](https://github.com/niphr/cs9/actions/workflows/check-and-pkgdown.yml) |
-| [csalert](https://niphr.github.io/csalert/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csalert)](https://cran.r-project.org/package=csalert) |
-| [csdata](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) |
-| [csdb](https://niphr.github.io/csdb/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) |
-| [csmaps](https://niphr.github.io/csmaps/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) |
-| [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![R-CMD-check](https://github.com/niphr/csstyle/actions/workflows/check-and-pkgdown.yml/badge.svg)](https://github.com/niphr/csstyle/actions/workflows/check-and-pkgdown.yml) |
-| [cstidy](https://niphr.github.io/cstidy/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) |
-| [cstime](https://niphr.github.io/cstime/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstime)](https://cran.r-project.org/package=cstime) |
-| [csutil](https://niphr.github.io/csutil/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) |
+| [cs9](https://niphr.github.io/cs9/) | Project | Richard Aubrey White | [![r-universe](https://niphr.r-universe.dev/badges/cs9)](https://niphr.r-universe.dev/cs9) |
+| [csalert](https://niphr.github.io/csalert/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csalert)](https://cran.r-project.org/package=csalert) [![r-universe](https://niphr.r-universe.dev/badges/csalert)](https://niphr.r-universe.dev/csalert) |
+| [csdata](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) [![r-universe](https://niphr.r-universe.dev/badges/csdata)](https://niphr.r-universe.dev/csdata) |
+| [csdb](https://niphr.github.io/csdb/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) [![r-universe](https://niphr.r-universe.dev/badges/csdb)](https://niphr.r-universe.dev/csdb) |
+| [csmaps](https://niphr.github.io/csmaps/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) [![r-universe](https://niphr.r-universe.dev/badges/csmaps)](https://niphr.r-universe.dev/csmaps) |
+| [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![r-universe](https://niphr.r-universe.dev/badges/csstyle)](https://niphr.r-universe.dev/csstyle) |
+| [cstidy](https://niphr.github.io/cstidy/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) [![r-universe](https://niphr.r-universe.dev/badges/cstidy)](https://niphr.r-universe.dev/cstidy) |
+| [cstime](https://niphr.github.io/cstime/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstime)](https://cran.r-project.org/package=cstime) [![r-universe](https://niphr.r-universe.dev/badges/cstime)](https://niphr.r-universe.dev/cstime) |
+| [csutil](https://niphr.github.io/csutil/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csutil)](https://cran.r-project.org/package=csutil) [![r-universe](https://niphr.r-universe.dev/badges/csutil)](https://niphr.r-universe.dev/csutil) |
 
 ## Installing packages
 
