@@ -31,7 +31,11 @@ We organize packages into two levels:
 
 ## Installing packages
 
-All niphr packages are built continuously on the [niphr R-universe](https://niphr.r-universe.dev), which always carries the latest development version. It's also the easiest way to install packages that aren't on CRAN, such as **cs9** and **csstyle**.
+All niphr packages are built continuously on the [niphr R-universe](https://niphr.r-universe.dev), which always carries the latest development version. It is also the easiest way to install packages that are not on CRAN, such as **cs9** and **csstyle**.
+
+### Install once
+
+Name the repository in the call itself. This changes nothing on your machine:
 
 ```r
 install.packages(
@@ -40,7 +44,44 @@ install.packages(
 )
 ```
 
-Swap `cs9` for any package in the registry above. Packages that are also on CRAN can still be installed the usual way with `install.packages("csmaps")`; the R-universe build just tracks the newest development version. Browse every package and version at [niphr.r-universe.dev](https://niphr.r-universe.dev), or check the [build dashboard](https://niphr.r-universe.dev/builds) for build status across R versions and platforms.
+Swap `cs9` for any package in the registry above.
+
+### Make it permanent
+
+Add the niphr R-universe to your repositories once. Every later `install.packages()` and `update.packages()` call then finds the niphr packages on its own.
+
+1. Open your user `.Rprofile`:
+
+   ```r
+   usethis::edit_r_profile()
+   ```
+
+2. Add these lines to the file:
+
+   ```r
+   options(repos = c(
+     niphr = "https://niphr.r-universe.dev",
+     CRAN = "https://cloud.r-project.org"
+   ))
+   ```
+
+3. Save the file and restart R.
+
+4. Check that R sees both repositories:
+
+   ```r
+   getOption("repos")
+   ```
+
+Now install any package in the registry above by name:
+
+```r
+install.packages("cs9")
+```
+
+CRAN stays in the list, so `install.packages("dplyr")` still works. For a package in both repositories, R installs the higher version. The R-universe build tracks the newest development version, so that is usually the R-universe one. On equal versions R takes the first repository in the list.
+
+Browse every package and version at [niphr.r-universe.dev](https://niphr.r-universe.dev), or check the [build dashboard](https://niphr.r-universe.dev/builds) for build status across R versions and platforms.
 
 ## Requirements by level
 
