@@ -39,12 +39,12 @@ Name the repository in the call itself. This changes nothing on your machine:
 
 ```r
 install.packages(
-  "cs9",
+  "csdata",
   repos = c("https://niphr.r-universe.dev", "https://cloud.r-project.org")
 )
 ```
 
-Swap `cs9` for any package in the registry above.
+Swap `csdata` for any package in the registry above.
 
 ### Make it permanent
 
@@ -76,7 +76,7 @@ Add the niphr R-universe to your repositories once. Every later `install.package
 Now install any package in the registry above by name:
 
 ```r
-install.packages("cs9")
+install.packages("csdata")
 ```
 
 CRAN stays in the list, so `install.packages("dplyr")` still works. For a package in both repositories, R installs the higher version. The R-universe build tracks the newest development version, so that is usually the R-universe one. On equal versions R takes the first repository in the list.
