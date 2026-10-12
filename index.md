@@ -23,6 +23,7 @@ We organize packages into two levels:
 | [csalert](https://niphr.github.io/csalert/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csalert)](https://cran.r-project.org/package=csalert) [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csalert.json)](https://niphr.r-universe.dev/csalert) |
 | [csdata](https://niphr.github.io/csdata/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdata)](https://cran.r-project.org/package=csdata) [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csdata.json)](https://niphr.r-universe.dev/csdata) |
 | [csdb](https://niphr.github.io/csdb/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csdb)](https://cran.r-project.org/package=csdb) [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csdb.json)](https://niphr.r-universe.dev/csdb) |
+| [csdocs](https://niphr.github.io/csdocs/) | Project | Richard Aubrey White | [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csdocs.json)](https://niphr.r-universe.dev/csdocs) |
 | [csmaps](https://niphr.github.io/csmaps/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/csmaps)](https://cran.r-project.org/package=csmaps) [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csmaps.json)](https://niphr.r-universe.dev/csmaps) |
 | [csstyle](https://niphr.github.io/csstyle/) | Project | Richard Aubrey White | [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/csstyle.json)](https://niphr.r-universe.dev/csstyle) |
 | [cstidy](https://niphr.github.io/cstidy/) | Project | Richard Aubrey White | [![CRAN status](https://www.r-pkg.org/badges/version/cstidy)](https://cran.r-project.org/package=cstidy) [![r-universe](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/niphr/niphr.github.io/main/badges/cstidy.json)](https://niphr.r-universe.dev/cstidy) |
@@ -201,5 +202,5 @@ The core team reviews and makes a recommendation. Final approval comes from the 
 
 ---
 
-*Last updated: 2026-06-29*
+*Last updated: 2026-10-12*
 *Questions? Contact RichardAubrey.White@fhi.no*
